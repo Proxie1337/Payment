@@ -1,0 +1,27 @@
+//Ask user to insert cash
+double cashInserted = input.nextDouble();
+
+/* While cash inserted is less than transaction cost
+   Keep on asking to input*/
+while (cashInserted < transactionPrice){
+	System.out.println("Please insert cash...");
+
+	//Ask for cash again
+	cashInserted = input.nextDouble();
+}
+
+/* Once they have inserted enough cash then
+   it exits the while loop. So the program
+   procceeds to the next line. */
+
+//Dispense the product because they have paid
+System.out.println("Dispensing...etc,etc...");
+
+/* Now check if any change is owed. Use an if statement.
+   If the inserted cash is greater than transaction price,
+   we owe them change.*/
+
+if (cashInserted > transactionPrice){
+	double change = cashInserted - transactionPrice;
+	System.out.println("Heres your change " + change);
+ }
